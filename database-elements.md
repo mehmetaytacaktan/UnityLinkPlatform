@@ -1,8 +1,8 @@
 # UnityLink Database Elements
 
 ### Users (Kullanıcılar)
-user_id (Kullanıcı kimlik numarası, benzersiz)
-username (Kullanıcı adı)
+* user_id (Kullanıcı kimlik numarası, benzersiz)
+* username (Kullanıcı adı)
 password (Parola, şifrelenmiş)
 email (E-posta adresi)
 registration_date (Kayıt tarihi)
