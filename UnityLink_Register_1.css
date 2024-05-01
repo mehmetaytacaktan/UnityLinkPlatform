@@ -1,0 +1,74 @@
+﻿.create-acc{
+    display: none;
+}
+.create-acc-clicked{
+    display:block;
+}
+.flex-container {
+    display: flex;
+}
+
+#register{
+    position: absolute;
+    left: 12%;
+    top: 2%;
+}
+
+#img-background {
+    position: absolute;
+    left: 40%;
+    height: 100%;
+    width: 60%;
+    z-index: -1;
+    top: 0px;
+    background: linear-gradient(pink, lightblue);
+}
+
+.register-background {
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 60%;
+    z-index: -1;
+    top: 0px;
+    background: linear-gradient(pink, lightblue);
+}
+input{
+    height: 20px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#reverseBtn{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightsteelblue;
+}
+
+#greeting{
+    font-size: 20px;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    margin-left: 30px;
+}
+
+.parag-on-img {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    color: black;
+    font-size: 70px;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+.subparag-on-img {
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    color: black;
+    font-size: 30px;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
