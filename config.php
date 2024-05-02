@@ -11,5 +11,6 @@ $conn = new mysqli($servername, $username, $password, $database);
 // Bağlantıyı kontrol et
 if ($conn->connect_error) {
     die("Veritabanına bağlanırken hata oluştu: " . $conn->connect_error);
+
 }
 ?>

@@ -1,3 +1,39 @@
+<?php
+global $conn;
+session_start();
+include_once("config.php");
+
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["email"]) && isset($_POST["password"])) {
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+
+        // Hash the password before comparing with the database
+        $hashed_password = md5($password);
+
+        // Prepare and execute the SQL statement
+        $stmt = $conn->prepare("SELECT * FROM Users WHERE email=? AND password=?");
+        $stmt->bind_param("ss", $email, $hashed_password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows == 1) {
+            // Authentication successful
+            $_SESSION["user"] = $email;
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            // Authentication failed
+            $error = "Invalid email or password.";
+        }
+    } else {
+        $error = "Please fill all the fields.";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +48,22 @@
             <div id="login">
                 <p id="greeting">Welcome Back!</p>
                 <div>
-                    <label>
-                        <input type="text" placeholder="E-mail">
-                    </label>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <label>
+                            <input type="text" name="email" placeholder="E-mail">
+                        </label>
                 </div>
                 <div>
                     <label>
-                        <input type="password" placeholder="Password">
+                        <input type="password" name="password" placeholder="Password">
                     </label>
                 </div>
-                <button id="signInBtn">SIGN IN</button>
+                <div>
+                    <button type="submit" id="signInBtn">SIGN IN</button>
+                </div>
+                <?php if (!empty($error)) { ?>
+                    <div style="color: red;"><?php echo $error; ?></div>
+                <?php } ?>
                 <p id="createAccountText">Don't have an account? <a href="register.php" style="color: blue;">Create Account</a></p>
             </div>
         </div>
