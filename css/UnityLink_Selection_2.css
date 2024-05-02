@@ -1,0 +1,78 @@
+﻿.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+.flex-item {
+    height: 30%;
+    width: 30%;
+    padding: 50px;
+    margin: 20px;
+
+    background-color: white;
+    background-size: 194px 194px;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 60px;
+}
+
+#greeting {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+    margin-left: 30%;
+}
+
+body{
+    background: linear-gradient(pink, lightblue);
+    min-height: 100%;
+    background-attachment: fixed;
+}
+#Kizilay{
+    background-image: url('kizilay.jpeg');
+}
+#Yesilay{
+    background-image: url('yesilay.png');
+}
+#TEMA{
+    background-image: url('tema.jpeg');
+}
+#TEV {
+    background-image: url('tev.jpg');
+}
+#IHH {
+    background-image: url('ihh.jpg');
+}
+#AKUT {
+    background-image: url('akut.jpg');
+}
+#Mor-cati {
+    background-image: url('morcati.png');
+}
+#AFAD {
+    background-image: url('afad.jpeg');
+}
+
+.links{
+    position: absolute;
+    right: 0px;
+
+}
+
+.nav-btn {
+    margin: 10px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+not-show{
+    display: none;
+}
