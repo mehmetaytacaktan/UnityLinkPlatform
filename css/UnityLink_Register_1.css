@@ -72,3 +72,17 @@ input{
     font-style: italic;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
+.login-background {
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 60%;
+    z-index: -1;
+    top: 0px;
+    background: linear-gradient(pink, lightblue);
+}
+#login {
+    position: absolute;
+    left: 12%;
+    top: 2%;
+}
