@@ -1,0 +1,63 @@
+﻿body {
+    background: linear-gradient(pink, lightblue);
+    min-height: 100%;
+    background-attachment: fixed;
+}
+.flex-container{
+    display: flex;
+}
+.users{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.user{
+    display: flex;
+    margin: 15px;
+}
+.user-info , .head-par{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 2%;
+}
+.user-info-btn , .close-btn{
+    margin: 10px;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+    font-size: 15px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+.head-par{
+    font-size: 30px;
+}
+.img {
+    background-color: white;
+    background-size: 94px 94px;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.kizilay {
+    background-image: url('blod-tier1.jpeg');
+}
+.kizilay2 {
+    background-image: url('blod-tier-2.jpeg');
+}
+.user-details{
+    display: flex;
+    flex-direction: column;
+}
+.img-container{
+    display: flex;
+    margin: 10px;
+}
+.details{
+    margin-left: 2%;
+}

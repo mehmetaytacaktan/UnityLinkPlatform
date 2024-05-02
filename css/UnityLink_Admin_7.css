@@ -1,0 +1,92 @@
+﻿body {
+    background: linear-gradient(pink, lightblue);
+    min-height: 100%;
+    background-attachment: fixed;
+}
+.flex-container{
+    display: flex;
+}
+.selection, .action{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-left: 2%;
+}
+.welcoming {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 2%;
+}
+.action-btn {
+    margin: 10px;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+    font-size: 15px;
+    background-color: transparent;
+    border-radius: 15px;
+}
+.search-user{
+    display: flex;
+    margin: 5px;
+}
+.user-label , .user-btn{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+    font-size: 15px;
+    margin: 10px;
+}
+.input{
+    border-radius: 15px;
+    margin-left: 10px;
+}
+.action {
+    width: 35%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.list-of-users{
+    display: flex;
+    flex-direction: column;
+}
+.user, .accept-announcer{
+    display: flex;
+    margin: 15px;
+}
+.user-btn{
+    background-color: transparent;
+    border-radius: 15px;
+    margin: 5px;
+    margin-left: 20px;
+}
+.img-container{
+    display: flex;
+}
+.img {
+    background-color: white;
+    background-size: 94px 94px;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.tier1{
+    background-image: url('blod-tier1.jpeg');
+}
+.tier2{
+    background-image: url('blod-tier-2.jpeg');
+}
+.action-details{
+    margin-left: 3%;
+    margin-top: 5%;
+}
+.kizilay {
+    background-image: url('kizilay.jpeg');
+}
+.tev {
+    background-image: url('tev.jpg');
+}

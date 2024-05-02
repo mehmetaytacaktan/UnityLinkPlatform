@@ -1,0 +1,61 @@
+﻿body {
+    background: linear-gradient(pink, lightblue);
+    min-height: 100%;
+    background-attachment: fixed;
+}
+.flex-container{
+    display: flex;
+}
+.select-categ{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.item-label {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 5%;
+}
+.medal-btn{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#country{
+    margin: 5px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.medals{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 5%;
+}
+
+.img {
+    margin-left: 2%;
+    background-color: white;
+    background-size: 144px 144px;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    width: 150px;
+    height: 150px;
+    border-radius: 60px;
+}
+
+.tier1 {
+    background-image: url('blod-tier1.jpeg');
+}
+
+.tier2 {
+    background-image: url('blod-tier-2.jpeg');
+    opacity: 0.5;
+}
+.img-container{
+    display: flex;
+}
