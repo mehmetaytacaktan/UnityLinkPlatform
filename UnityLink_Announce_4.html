@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="UnityLink_Announcements_3.css"/>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="specify">
+            <div class="img"></div> <!--php ile önceki sayfada tıklandığında buraya ilgili class'ı ClassList.add ile ekle-->
+            <label for="cities" class="flex-item-label">Choose a city: </label>
+            <select name="cities" id="cities" class="flex-item">
+                <option>Ankara</option>
+                <option>Izmir</option>
+                <option>Istanbul</option>
+            </select>
+            <label for="date-time-start" class="flex-item-label">Specify the start date and time: </label>
+            <input type="datetime-local" id="date-time-start" name="date-time-start" class="flex-item" />
+            <label for="date-time-end" class="flex-item-label">Specify the finish date and time: </label>
+            <input type="datetime-local" id="date-time-end" name="date-time-end" class="flex-item" />
+            <button id="search" class="flex-item">Search</button>
+        </div>
+        <div class="create">
+            <label for="msg" class="flex-item-label-create">Write down your message: </label>
+            <textarea placeholder="Enter Your Message! Please specify place, date and time alongside the message before click send!" 
+                      name="msg" id="msg" cols="40" rows="20" class="flex-item-create"></textarea>
+            <button id="send" class="flex-item-create">Sent</button>
+        </div>
+        <div class="details">
+            <div class="flex-item-details">
+                <p class="msg-from-db">
+                    1.05.2024 tarihinde 9.30 - 17.30 saatleri arasında gerçekleşecek olan kan bağışı
+                    etkinliğimize her katılımcıyı bekleriz!
+                </p> <!--phpde katılan kişi sayısını göster-->
+                <button class="join-btn">Join</button>
+                <button class="observe-btn" onclick="adjust()">Observe</button>
+            </div>
+        </div>
+        <div class="user-details">
+            <!--phpden user kısımlarını getir-->
+            <div class="usr">
+                <p class="usr-info">Mehmet Aytac Aktan</p>
+                <input type="checkbox" name="attended" id="attended" />
+                <label for="attended" class="attend-info-label">Attended</label>
+                <input type="checkbox" name="not-attended" id="not-attended" />
+                <label for="not-attended" class="attend-info-label">Not attended</label>
+            </div>
+            <div class="usr">
+                <p class="usr-info">Mehmet Aytac Aktan</p>
+                <input type="checkbox" name="attended" id="attended" />
+                <label for="attended" class="attend-info-label">Attended</label>
+                <input type="checkbox" name="not-attended" id="not-attended" />
+                <label for="not-attended" class="attend-info-label">Not attended</label>
+            </div>
+            <button class="cancel" onclick="adjustDetails()">Cancel</button>
+            <button class="accept" onclick="adjustDetails()">Accept Changes</button>
+        </div>
+    </div>
+    <script src="UnityLink_Announce_4.js"></script>
+</body>
+</html>
