@@ -10,20 +10,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST["email"];
         $password = $_POST["password"];
 
-        // Hash the password before comparing with the database
-        $hashed_password = md5($password);
-
         // Prepare and execute the SQL statement
-        $stmt = $conn->prepare("SELECT * FROM Users WHERE email=? AND password=?");
-        $stmt->bind_param("ss", $email, $hashed_password);
+        $stmt = $conn->prepare("SELECT * FROM Users WHERE email=?");
+        $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if ($result->num_rows == 1) {
-            // Authentication successful
-            $_SESSION["user"] = $email;
-            header("Location: dashboard.php");
-            exit();
+            $row = $result->fetch_assoc();
+            // Verify password
+            if (password_verify($password, $row['password'])) {
+                // Authentication successful
+                $_SESSION["user"] = $email;
+                header("Location: dashboard.php");
+                exit();
+            } else {
+                // Authentication failed
+                $error = "Invalid email or password.";
+            }
         } else {
             // Authentication failed
             $error = "Invalid email or password.";
