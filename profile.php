@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="css/UnityLink_Profile_5.css"/>
 </head>
 <body>
+<?php
+    global $conn;
+    session_Start();
+    include_once("config.php");
+    $value = $_GET['user_id'];
+
+    $query1 = "SELECT username FROM Users WHERE user_id = '$value'";
+    $result = $conn->query($query1);
+    if($record = $result->fetch_assoc()) {
+        $name = $record["username"];
+    }
+    ?>
     <!---<div class="flex-container">
         <div class="user-name">
             <p>HELLO USER</p><!--php ile kullanıcı ismi getirilecek--><!----
@@ -25,7 +37,7 @@
 
     <div class="flex-container">
         <div class="select-categ">
-            <p class="item-label">HELLO USER</p><!--ismi db'den al-->
+            <p class="item-label">HELLO <?= $name ?> </p><!--ismi db'den al-->
             <label for="country" class="item-label">Set Your Current Location: </label>
             <select name="country" id="country">
                 <option>Ankara</option>
@@ -42,7 +54,7 @@
             <!--php ile tıkladığında o butona ait kategoriyi getir-->
             <p class="item-label">Your Blood Donor Score: 100</p>
             <div class="img-container">
-                <div class="img tier1"></div>
+                <div class="img tier1" style="background-image: url('img/blod-tier1.jpeg')"></div>
                 <div class="img tier2"></div>
             </div>
         </div>
