@@ -50,6 +50,9 @@
 .kizilay2 {
     background-image: url('blod-tier-2.jpeg');
 }
+.kizilay3 {
+    background-image: url('kizilay.jpeg');
+}
 .user-details{
     display: flex;
     flex-direction: column;

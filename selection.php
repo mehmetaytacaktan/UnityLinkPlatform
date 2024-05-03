@@ -40,7 +40,7 @@ while($record = $result0->fetch_assoc()){
         // Eğer resim dosyası varsa, düğme oluşturalım
         ?>
         <form action="announcements.php" method="get">
-            <input type="submit" name="btn" class="flex-item" id="<?= $record["name"] ?>" style="background-image: url('<?= $img_path ?>');" />
+            <input type="submit" value="" name="btn" class="flex-item" id="<?= $record["name"] ?>" style="background-image: url('<?= $img_path ?>');" />
         </form>
         <?php
     } else {
