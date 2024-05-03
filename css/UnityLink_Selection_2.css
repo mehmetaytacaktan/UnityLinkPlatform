@@ -11,15 +11,17 @@
     width: 30%;
     padding: 50px;
     margin: 20px;
-
-    background-color: white;
-    background-size: 194px 194px;
-    background-repeat: no-repeat;
     border: 3px solid black;
     width: 200px;
     height: 200px;
     border-radius: 60px;
+    background-color: transparent; /* Arka plan rengini saydam yapın */
+    background-size: cover; /* Arka plan resmi boyutunu ayarlayın */
+    background-position: center; /* Arka plan resmini ortalamak için */
 }
+
+
+
 
 #greeting {
     font-size: 30px;
@@ -34,28 +36,28 @@ body{
     background-attachment: fixed;
 }
 #Kizilay{
-    background-image: url('kizilay.jpeg');
+    background-image: url('img/kizilay.jpeg');
 }
 #Yesilay{
-    background-image: url('yesilay.png');
+    background-image: url('img/yesilay.png');
 }
 #TEMA{
-    background-image: url('tema.jpeg');
+    background-image: url('img/tema.jpeg');
 }
 #TEV {
-    background-image: url('tev.jpg');
+    background-image: url('img/tev.jpg');
 }
 #IHH {
-    background-image: url('ihh.jpg');
+    background-image: url('img/ihh.jpg');
 }
 #AKUT {
-    background-image: url('akut.jpg');
+    background-image: url('img/akut.jpg');
 }
 #Mor-cati {
-    background-image: url('morcati.png');
+    background-image: url('img/morcati.png');
 }
 #AFAD {
-    background-image: url('afad.jpeg');
+    background-image: url('img/afad.jpeg');
 }
 
 .links{
