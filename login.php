@@ -10,6 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST["email"];
         $password = $_POST["password"];
 
+        // Hash the password before comparing with the database
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
         // Prepare and execute the SQL statement
         $stmt = $conn->prepare("SELECT * FROM Users WHERE email=?");
         $stmt->bind_param("s", $email);
@@ -21,8 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verify password
             if (password_verify($password, $row['password'])) {
                 // Authentication successful
-                $_SESSION["user"] = $email;
-                header("Location: dashboard.php");
+                $_SESSION["user_id"] = $row['user_id'];
+                header("Location: selection.php?user_id=" . $_SESSION["user_id"]);
                 exit();
             } else {
                 // Authentication failed
