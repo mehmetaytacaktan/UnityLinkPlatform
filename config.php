@@ -1,9 +1,9 @@
 <?php
 // Veritabanı bilgileri
-$servername = "sql11.freemysqlhosting.net";
-$username = "sql11703375"; // Veritabanı kullanıcı adı
-$password = "z5sSQ9IE8s"; // Veritabanı şifresi
-$database = "sql11703375"; // Veritabanı adı
+$servername = "";
+$username = ""; // Veritabanı kullanıcı adı
+$password = ""; // Veritabanı şifresi
+$database = ""; // Veritabanı adı
 
 // Veritabanı bağlantısını oluştur
 $conn = new mysqli($servername, $username, $password, $database);
